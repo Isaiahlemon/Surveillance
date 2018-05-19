@@ -4,3 +4,16 @@
  * This is a general purpose Gradle build.
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+   compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
+   testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+// This is how we tell gradle where the main method is
+mainClassName = 'application.Surveillance'
